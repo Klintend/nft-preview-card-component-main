@@ -4,30 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | NFT preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <main class="main">
+    <section class="container">
+      <div class="content">
+        <img class="main-img" src="./images/image-equilibrium.jpg" alt="card image">
 
-  Equilibrium #3429
+        <h1>Equilibrium #3429</h1>
 
-  Our Equilibrium collection promotes balance and calm.
+        <p>Our Equilibrium collection promotes balance and calm.
+        </p>
 
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
+        <!-- start of eth price -->
+        <div class="nft-timer">
+          <div class="icon-text">
+            <svg width="11" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" fill="#00FFF8" />
+            </svg>
+            <span class="eth-price">0.041 ETH</span>
+          </div>
+          <div class="icon-time">
+            <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z"
+                fill="#8BACD9" />
+            </svg>
+            <span class="eth-timer">3 days left</span>
+          </div>
+        </div>
+        <!-- end of eth price -->
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <div class="line">
+          <div class="line-draw"></div>
+        </div>
+        <!-- avatar side start -->
+        <div class="creator">
+          <img class="creator-avatar" src="./images/image-avatar.png" alt="avatar image">
+          <h4 class="creator-text">Creation of<span class="creator-span"> Jules Wyvern</span></h4>
+        </div>
+        <!-- avatar side end -->
+      </div>
+      <!-- end of content -->
+    </section>
+    <!-- end of container -->
+  </main>
 </body>
 </html>

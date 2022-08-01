@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Outfit', sans-serif;
+}
+
+.main{
+ background-color: hsl(217, 54%, 11%);
+ min-height: 100vh;
+ display: grid;
+ place-content: center;
+}
+
+.container{
+ max-width: 355px;
+ margin: 0 auto;
+ border: 1px solid hsl(216, 50%, 16%);
+ border-radius: 0.8em;
+ color: white;
+ background-color: hsl(216, 50%, 16%);
+ box-shadow: 0.2em 0.5em 1em hsl(217, 54%, 11%);
+}
+
+.content{
+ display: flex;
+ flex-direction: column;
+ gap: 1.2em;
+ margin: 1.2em 1.2em 1.9em 1.2em;
+ position: relative;
+}
+
+
+.image-container{
+ position: relative;
+}
+.image-container::before,.image-container::after{
+ background-color: rgba(0, 255, 247, 0.2);
+ content: '';
+ position: absolute;
+ top: 0;
+ bottom: 1%;
+ left: 0;
+ right: 0;
+ opacity: 0;
+ z-index: 5;
+ transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 0.5em;
+}
+
+.image-container:hover:before,.image-container:hover:after{
+ transform: scale(1);
+ opacity: 1;
+}
+
+.image-container:hover > img{
+ opacity: 0.7;
+}
+
+.image-container:hover .overlay{
+ opacity: 1;
+   cursor: pointer;
+}
+
+.main-img{
+ max-width: 100%;
+ border-radius: 0.5em;
+ backface-visibility: hidden;
+}
+
+.overlay{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 10;
+opacity: 0;
+transition-delay: 0.1s;
+}
+
+h1{
+ font-weight: 400;
+}
+h1:hover{
+ cursor: pointer;
+ color: hsl(178, 100%, 50%);
+}
+
+p{
+ font-size: 1.125rem;
+ font-weight: 300;
+ color: hsl(215, 51%, 70%);
+}
+
+.nft-timer{
+ position: relative;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+  font-size: 1.05rem;
+}
+
+.icon-text{
+ display: flex;
+ align-items: flex-start;
+ gap: 0.3em;
+ color: hsl(178, 100%, 50%);
+}
+.eth-price{
+ font-weight: 400;
+  font-size: 1rem;
+}
+
+.icon-time{
+ display: flex;
+ align-items: flex-start;
+ gap: 0.3em;
+ color: hsl(215, 51%, 70%);
+ font-weight: 300;
+}
+.eth-timer{
+ margin-top: -0.12em;
+}
+
+.line-draw{
+ position: absolute;
+ top: 31em;
+ width: 100%;
+ background-color: hsl(215, 32%, 27%);
+ height: 0.2%;
+}
+
+.creator{
+ display: flex;
+ align-items: center;
+ gap: 0.8em;
+}
+
+.creator-avatar{
+ max-width: 10%;
+ border: 1.9px solid white;
+ border-radius: 50%;
+}
+
+h4{
+ color: hsl(215, 51%, 70%);
+ font-weight: 300;
+}
+
+.creator-span{
+ margin-left: 0.1em;
+ /* font-weight: 600; */
+ color: hsl(0, 0%, 100%);
+}
+.creator-span:hover{
+ color: hsl(178, 100%, 50%);
+ cursor: pointer;
+}
+
+
+@media (max-width: 690px) {
+.container{
+ margin: 0 1.5em;
+}
+
+ .creator{
+  gap: 1em;
+ }
+.creator-avatar{
+max-width: 13.5%;
+}
+ 
+ .line-draw{
+  top: auto;
+ }
+}

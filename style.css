@@ -126,15 +126,15 @@ p{
  font-weight: 300;
 }
 .eth-timer{
- margin-top: -0.12em;
+ margin-top: -0.11em;
 }
 
 .line-draw{
  position: absolute;
- top: 31em;
+ top: 31.1em;
  width: 100%;
  background-color: hsl(215, 32%, 27%);
- height: 0.2%;
+ height: 0.1%;
 }
 
 .creator{
@@ -149,8 +149,9 @@ p{
  border-radius: 50%;
 }
 
-h4{
+h2{
  color: hsl(215, 51%, 70%);
+ font-size: 1rem;
  font-weight: 300;
 }
 
